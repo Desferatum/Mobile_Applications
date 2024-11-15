@@ -13,8 +13,11 @@ class LoginActivity : AppCompatActivity() {
 
         val registerLink : TextView = findViewById(R.id.register_link)
         registerLink.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            }
             startActivity(intent)
+            finish()
         }
     }
 }
