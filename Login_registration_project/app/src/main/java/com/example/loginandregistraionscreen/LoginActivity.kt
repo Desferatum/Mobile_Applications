@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.content.Intent
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import com.example.credentials.CredentialsManager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 
 class LoginActivity : AppCompatActivity() {
@@ -18,20 +20,49 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login_activity)
 
         val emailEditText: TextInputEditText = findViewById(R.id.emailEditText)
+        val emailTextLayout: TextInputLayout = findViewById(R.id.enter_email)
+
         val passwordEditText: TextInputEditText = findViewById(R.id.passwordEditText)
+        val passwordTextLayout: TextInputLayout = findViewById(R.id.enter_password)
+
         val nextButton: MaterialButton = findViewById(R.id.button_next)
 
-        nextButton.setOnClickListener {
-            val email = emailEditText.text.toString()
-            val password = passwordEditText.text.toString()
+        emailEditText.setOnEditorActionListener { _, actionId, _ ->
+            when (actionId) {
+                EditorInfo.IME_ACTION_NEXT -> {
+                    val email = emailEditText.text.toString()
 
-            if (!credentialsManager.isEmailValid(email)) {
-                Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show()
-            } else if (!credentialsManager.isPasswordValid(password)) {
-                Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Validation successful!", Toast.LENGTH_SHORT).show()
+                    if (!credentialsManager.isEmailValid(email)) {
+                        emailTextLayout.isErrorEnabled = true
+                        emailTextLayout.error = "Invalid email address"
+                    } else {
+                        emailTextLayout.isErrorEnabled = false
+                    }
+                    true
+                }
+                else -> false
             }
+        }
+
+        passwordEditText.setOnEditorActionListener { _, actionId, _ ->
+            when (actionId) {
+                EditorInfo.IME_ACTION_DONE -> {
+                    val password = passwordEditText.text.toString()
+
+                    if (!credentialsManager.isPasswordValid(password)) {
+                        passwordTextLayout.isErrorEnabled = true
+                        passwordTextLayout.error = "Password cannot be empty"
+                    } else {
+                        passwordTextLayout.isErrorEnabled = false
+                    }
+                    true
+                }
+                else -> false
+            }
+        }
+
+        nextButton.setOnClickListener {
+                Toast.makeText(this, "Validation successful!", Toast.LENGTH_SHORT).show()
         }
 
         val registerLink : TextView = findViewById(R.id.register_link)
