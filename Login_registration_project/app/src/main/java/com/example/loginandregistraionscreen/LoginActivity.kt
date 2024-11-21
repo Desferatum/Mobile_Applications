@@ -62,7 +62,30 @@ class LoginActivity : AppCompatActivity() {
         }
 
         nextButton.setOnClickListener {
+            val email = emailEditText.text.toString()
+            var valid = true
+
+            if (!credentialsManager.isEmailValid(email)) {
+                emailTextLayout.isErrorEnabled = true
+                emailTextLayout.error = "Invalid email address"
+                valid = false
+            } else {
+                emailTextLayout.isErrorEnabled = false
+            }
+
+            val password = passwordEditText.text.toString()
+
+            if (!credentialsManager.isPasswordValid(password)) {
+                passwordTextLayout.isErrorEnabled = true
+                passwordTextLayout.error = "Password cannot be empty"
+                valid = false
+            } else {
+                passwordTextLayout.isErrorEnabled = false
+            }
+
+            if (valid) {
                 Toast.makeText(this, "Validation successful!", Toast.LENGTH_SHORT).show()
+            }
         }
 
         val registerLink : TextView = findViewById(R.id.register_link)
