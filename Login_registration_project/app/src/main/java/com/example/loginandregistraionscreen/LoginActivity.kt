@@ -32,30 +32,31 @@ class LoginActivity : AppCompatActivity() {
                     layout = emailLayout,
                     value = email,
                 errorMessage = "Invalid email input"
-            ) { credentialsManager.isEmailValid(it) }
+                ) { credentialsManager.isEmailValid(it) }
 
-            val isPasswordValid = validateField(
-                layout = passwordLayout,
-                value = password,
-                errorMessage = "Password cannot be empty"
-            ) { credentialsManager.isPasswordValid(it) }
+                val isPasswordValid = validateField(
+                    layout = passwordLayout,
+                    value = password,
+                    errorMessage = "Password cannot be empty"
+                ) { credentialsManager.isPasswordValid(it) }
 
-            if (isEmailValid && isPasswordValid) {
-                Toast.makeText(this, "Validation successful!", Toast.LENGTH_SHORT).show()
-                // Proceed to the next activity or action
-            }
-
-
-            val registerLink: TextView = findViewById(R.id.register_link)
-            registerLink.setOnClickListener {
-                val intent = Intent(this, RegisterActivity::class.java).apply {
-                    flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                if (isEmailValid && isPasswordValid) {
+                    val intent = Intent(this, EmptySuccessActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
-                startActivity(intent)
-                finish()
-            }
 
-        }
+
+                val registerLink: TextView = findViewById(R.id.register_link)
+                registerLink.setOnClickListener {
+                    val intent = Intent(this, RegisterActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    }
+                    startActivity(intent)
+                    finish()
+                }
+
+            }
 
     }
     private fun validateField(
