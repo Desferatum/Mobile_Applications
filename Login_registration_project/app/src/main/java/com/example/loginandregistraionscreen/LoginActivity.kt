@@ -14,15 +14,20 @@ import com.google.android.material.textfield.TextInputLayout
 class LoginActivity : AppCompatActivity() {
     private val credentialsManager = CredentialsManager()
 
+    private val emailLayout: TextInputLayout
+        get() = findViewById(R.id.enter_email)
+    private val emailEditText: TextInputEditText
+        get() = findViewById(R.id.emailEditText)
+    private val passwordLayout: TextInputLayout
+        get() = findViewById(R.id.enter_password)
+    private val passwordEditText: TextInputEditText
+        get() = findViewById(R.id.passwordEditText)
+    private val nextButton: MaterialButton
+        get() = findViewById(R.id.button_next)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
-
-            val emailLayout: TextInputLayout = findViewById(R.id.enter_email)
-            val emailEditText: TextInputEditText = findViewById(R.id.emailEditText)
-            val passwordLayout: TextInputLayout = findViewById(R.id.enter_password)
-            val passwordEditText: TextInputEditText = findViewById(R.id.passwordEditText)
-            val nextButton: MaterialButton = findViewById(R.id.button_next)
 
             nextButton.setOnClickListener {
                 val email = emailEditText.text.toString()
@@ -37,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
                 val isPasswordValid = validateField(
                     layout = passwordLayout,
                     value = password,
-                    errorMessage = "Password cannot be empty"
+                    errorMessage = "Wrong or empty password"
                 ) { credentialsManager.isPasswordValid(it) }
 
                 if (isEmailValid && isPasswordValid) {
