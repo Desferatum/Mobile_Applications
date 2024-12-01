@@ -14,4 +14,11 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun StringEqualsTest() {
+        assertTrue("AAA",equals("AAA"))
+        assertFalse("AAA".equals("aaa"))
+        assertTrue("AAA".equals("aaa", true))
+    }
 }

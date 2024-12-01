@@ -8,8 +8,20 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.widget.TextView
+import com.example.credentials.CredentialsManager
+
+
+/*
+    User provides proper, unused credentials -> success
+    User provides used email -> failure
+    User provides used email with different casing -> failure
+
+
+ */
+
 
 class RegisterActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_activity)
@@ -24,6 +36,8 @@ class RegisterActivity : AppCompatActivity() {
         mSpannableString.setSpan(mMainColor, 37, 57, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         textView.text = mSpannableString
+
+
 
         val loginLink : TextView = findViewById(R.id.login_link)
         loginLink.setOnClickListener {

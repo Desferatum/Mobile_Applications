@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.content.Intent
-import android.widget.Toast
 import com.example.credentials.CredentialsManager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -22,14 +21,14 @@ class LoginActivity : AppCompatActivity() {
         get() = findViewById(R.id.enter_password)
     private val passwordEditText: TextInputEditText
         get() = findViewById(R.id.passwordEditText)
-    private val nextButton: MaterialButton
-        get() = findViewById(R.id.button_next)
+    private val nextButtonLogin: MaterialButton
+        get() = findViewById(R.id.button_next_login)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
 
-            nextButton.setOnClickListener {
+            nextButtonLogin.setOnClickListener {
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
 
@@ -51,17 +50,16 @@ class LoginActivity : AppCompatActivity() {
                     finish()
                 }
 
-
-                val registerLink: TextView = findViewById(R.id.register_link)
-                registerLink.setOnClickListener {
-                    val intent = Intent(this, RegisterActivity::class.java).apply {
-                        flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-                    }
-                    startActivity(intent)
-                    finish()
-                }
-
             }
+
+        val registerLink: TextView = findViewById(R.id.register_link)
+        registerLink.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            }
+            startActivity(intent)
+            finish()
+        }
 
     }
     private fun validateField(

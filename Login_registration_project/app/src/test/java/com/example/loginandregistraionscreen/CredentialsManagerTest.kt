@@ -54,4 +54,20 @@ class CredentialsManagerTest {
 
         assertEquals(true, isPasswordValid)
     }
+
+
+    //User registers with proper credentials and unused email - success
+    @Test
+    fun givenProperUnusedCredentials_whenUserRegisters_thenSuccess() {
+        val credentialsManager = CredentialsManager()
+        val newEmail = "another@te.st"
+        val newPassword = "1234qwer"
+
+        credentialsManager.register("Full name", newEmail, "600 600 600", newPassword)
+
+        val isLoginSuccess = credentialsManager.login(newEmail, newPassword)
+        assertTrue(isLoginSuccess)
+    }
+
+
 }
