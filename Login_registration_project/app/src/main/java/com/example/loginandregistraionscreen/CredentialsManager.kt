@@ -1,7 +1,7 @@
 package com.example.credentials
 
 class CredentialsManager {
-    val credentials = mutableMapOf<String, String>(
+    private val credentials = mutableMapOf<String, String>(
         Pair("test@te.st", "1234"),
         "test@te.st" to "1234"
     )

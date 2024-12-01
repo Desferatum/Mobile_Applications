@@ -1,6 +1,6 @@
 package com.example.credentials
 
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.junit.Assert.*
 
 class CredentialsManagerTest {
@@ -16,7 +16,7 @@ class CredentialsManagerTest {
     }
 
     // Test wrong email format
-    @Test
+    @org.junit.jupiter.api.Test
     fun givenWrongEmailFormat_thenReturnFalse() {
         val credentialsManager = CredentialsManager()
 
@@ -26,7 +26,7 @@ class CredentialsManagerTest {
     }
 
     // Test proper email
-    @Test
+    @org.junit.jupiter.api.Test
     fun givenProperEmail_thenReturnTrue() {
         val credentialsManager = CredentialsManager()
 

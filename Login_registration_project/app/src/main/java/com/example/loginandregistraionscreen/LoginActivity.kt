@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
                 val isEmailValid = validateField(
                     layout = emailLayout,
                     value = email,
-                errorMessage = "Invalid email input"
+                    errorMessage = "Invalid email input"
                 ) { credentialsManager.isEmailValid(it) }
 
                 val isPasswordValid = validateField(
