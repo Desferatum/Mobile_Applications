@@ -1,27 +1,44 @@
-package com.example.credentials
+package com.example.loginandregistraionscreen
+
+import java.util.Locale
 
 class CredentialsManager {
-    private val credentials = mutableMapOf<String, String>(
-        Pair("test@te.st", "1234"),
-        "test@te.st" to "1234"
-    )
+    private val registeredEmails = mutableSetOf("test@example.com", "user@example.com")
+    private val userCredentials = mutableMapOf<String, String>()
 
     fun isEmailValid(email: String): Boolean {
-        return email.isNotEmpty() && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() && email==("test@te.st")
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     fun isPasswordValid(password: String): Boolean {
-        return password.isNotEmpty() && password==("1234")
+        return password.isNotEmpty()
     }
 
     fun login(email: String, password: String): Boolean {
-        if (credentials.contains(email)) {
-            return credentials.get(email).equals(password)
-        }
-        return false
+        val normalizedEmail = email.trim().lowercase()
+        return userCredentials[normalizedEmail] == password
     }
 
-    fun register(fullName: String, email: String, phoneNumber: String, password: String) {
-        credentials.put(email, password)
+    fun register(email: String, password: String): String {
+        val normalizedEmail = email.trim().lowercase()
+        return if (registeredEmails.contains(normalizedEmail)) {
+            "This email is already taken"
+        } else {
+            registeredEmails.add(normalizedEmail)
+            userCredentials[normalizedEmail] = password
+            "Registration successful"
+        }
+    }
+
+    fun isUserRegistered(email: String): Boolean {
+        val normalizedEmail = email.lowercase(Locale.getDefault())
+        return userCredentials.containsKey(normalizedEmail)
+    }
+
+    fun isEmailRegistered(email: String): Boolean {
+        return userCredentials.containsKey(email.trim().lowercase())
     }
 }
+
+
+

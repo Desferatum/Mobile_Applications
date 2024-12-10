@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.content.Intent
-import com.example.credentials.CredentialsManager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -28,29 +27,33 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
 
-            nextButtonLogin.setOnClickListener {
-                val email = emailEditText.text.toString()
-                val password = passwordEditText.text.toString()
+        nextButtonLogin.setOnClickListener {
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
 
-                val isEmailValid = validateField(
-                    layout = emailLayout,
-                    value = email,
-                    errorMessage = "Invalid email input"
-                ) { credentialsManager.isEmailValid(it) }
+            val isEmailValid = validateField(
+                layout = emailLayout,
+                value = email,
+                errorMessage = "Invalid email input"
+            ) { credentialsManager.isEmailValid(it) }
 
-                val isPasswordValid = validateField(
-                    layout = passwordLayout,
-                    value = password,
-                    errorMessage = "Wrong or empty password"
-                ) { credentialsManager.isPasswordValid(it) }
+            val isPasswordValid = validateField(
+                layout = passwordLayout,
+                value = password,
+                errorMessage = "Wrong or empty password"
+            ) { credentialsManager.isPasswordValid(it) }
 
-                if (isEmailValid && isPasswordValid) {
-                    val intent = Intent(this, EmptySuccessActivity::class.java)
+            if (isEmailValid && isPasswordValid) {
+                val loginSuccessful = credentialsManager.login(email, password)
+                if (loginSuccessful) {
+                    val intent = Intent(this@LoginActivity, EmptySuccessActivity::class.java)
                     startActivity(intent)
-                    finish()
+                } else {
+                    emailLayout.error = "Invalid email or password"
+                    passwordLayout.error = "Invalid email or password"
                 }
-
             }
+        }
 
         val registerLink: TextView = findViewById(R.id.register_link)
         registerLink.setOnClickListener {
@@ -62,6 +65,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
     private fun validateField(
         layout: TextInputLayout,
         value: String,
