@@ -61,7 +61,6 @@ class RegisterActivity : AppCompatActivity() {
 
             val result = credentialsManager.register(email, password)
             val exist = credentialsManager.isEmailRegistered(email)
-
             if (isEmailValid && isPasswordValid) {
                 if (result == "Registration successful" && !exist) {
                     Log.d("Onboarding", "Clicked log in label")
