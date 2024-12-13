@@ -32,6 +32,3 @@ class CredentialsManager {
         return userCredentials.containsKey(email.trim().lowercase())
     }
 }
-
-
-
