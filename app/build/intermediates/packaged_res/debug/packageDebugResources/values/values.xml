@@ -8,6 +8,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Login and Registraion screen</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <style name="BoldBigText" parent="TextAppearance.AppCompat">
         <item name="android:textColor">#232222</item>
         <item name="android:textSize">35sp</item>

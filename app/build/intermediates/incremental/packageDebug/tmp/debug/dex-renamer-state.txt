@@ -1,4 +1,4 @@
-#Wed Dec 11 18:12:05 CET 2024
+#Fri Dec 13 22:30:07 CET 2024
 base.0=D\:\\Mobile_Applications\\Login_registration_project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\Mobile_Applications\\Login_registration_project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\Mobile_Applications\\Login_registration_project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex

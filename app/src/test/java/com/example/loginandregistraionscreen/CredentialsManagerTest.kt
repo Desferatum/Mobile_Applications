@@ -1,5 +1,11 @@
-class CredentialsManagerTest {
+package com.example.loginandregistraionscreen
 
+import com.example.loginandregistraionscreen.CredentialsManager
+import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertTrue
+import org.junit.Test
+
+class CredentialsManagerTest {
     // Test empty email
     @Test
     fun givenEmptyEmail_thenReturnFalse() {

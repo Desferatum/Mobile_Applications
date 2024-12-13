@@ -1,16 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:1-41:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\shlom\.gradle\caches\8.9\transforms\62a44b8b31048faec3f96e34139dd9fb\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\shlom\.gradle\caches\8.9\transforms\cfae3857f78d43e016469baaafac5c48\transformed\constraintlayout-2.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\shlom\.gradle\caches\8.9\transforms\dc3c7438bf9aa8ae673a49529ec20887\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\shlom\.gradle\caches\8.9\transforms\c20b2b9e8be9f3180f6903d52612cc61\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\shlom\.gradle\caches\8.9\transforms\1e0ed208c8b0bcb4e08ddb0df7e16272\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\shlom\.gradle\caches\8.9\transforms\e3917049833432edd239f62b254a8ebd\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.8.0] C:\Users\shlom\.gradle\caches\8.9\transforms\45d02183b8b443a0b452a3ce5530a78a\transformed\activity-1.8.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.8.5] C:\Users\shlom\.gradle\caches\8.9\transforms\f6e735cfb1f147da2af55fee18bf949c\transformed\fragment-1.8.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment-ktx:1.8.5] C:\Users\shlom\.gradle\caches\8.9\transforms\b90344477a8b7d1c42bc672ad48be735\transformed\fragment-ktx-1.8.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.3] C:\Users\shlom\.gradle\caches\8.9\transforms\766815df7ff6fce84c0de57122aaa9db\transformed\activity-ktx-1.9.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.3] C:\Users\shlom\.gradle\caches\8.9\transforms\70387cc6b115d0d45667458140fdf232\transformed\activity-1.9.3\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\shlom\.gradle\caches\8.9\transforms\3eff1f8697942a0996b965b5893c061c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\shlom\.gradle\caches\8.9\transforms\37fd8183d96b9dcf7ae992085d6d489a\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\shlom\.gradle\caches\8.9\transforms\f2eb79344b28e93e0bdd6f394f3b45bc\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
@@ -25,10 +27,14 @@ MERGED from [androidx.customview:customview:1.1.0] C:\Users\shlom\.gradle\caches
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\shlom\.gradle\caches\8.9\transforms\523f77c277f1ac31e6e117a2b117ed4a\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\shlom\.gradle\caches\8.9\transforms\0b27a64f0e9c61e874c86b7c59c19928\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.15.0] C:\Users\shlom\.gradle\caches\8.9\transforms\d7f7879023271bdcdc59966016116610\transformed\core-1.15.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\shlom\.gradle\caches\8.9\transforms\2df13ec7a61fafd444bd4eda15106ec2\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\shlom\.gradle\caches\8.9\transforms\60ae55c66cab6d9a142695220cfd9245\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\7847a9d0be50e0e019e757d3357bb2eb\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\43d53273e65635c294b95205aecaa339\transformed\lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\685204d1d89ec9c2236adb137a4f7aba\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\b21647b531096b87a70e02df3b7f6bee\transformed\lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\cd346998c688a1c1f565539328946211\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\1ecd1e411fb7534ad0c8c71d802ba9c8\transformed\lifecycle-livedata-core-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\5028ad0721a6cdaa43f9f46c8144ddbd\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\4849d2b6367ceebba7f71bd699041eca\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\4530800d4cef7ffa2bb45163bb2f3a3d\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
@@ -56,8 +62,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\shlom\.
 	xmlns:android
 		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:5:5-36:19
-INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:5:5-36:19
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:5:5-39:19
+INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:5:5-39:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\shlom\.gradle\caches\8.9\transforms\62a44b8b31048faec3f96e34139dd9fb\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\shlom\.gradle\caches\8.9\transforms\62a44b8b31048faec3f96e34139dd9fb\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\shlom\.gradle\caches\8.9\transforms\cfae3857f78d43e016469baaafac5c48\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
@@ -96,38 +102,44 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\sh
 		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:13:9-63
 	android:dataExtractionRules
 		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.loginandregistraionscreen.EmptySuccessActivity
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:15:9-21:20
+activity#com.example.loginandregistraionscreen.SampleActivity
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:exported
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:17:13-37
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:17:13-36
 	android:name
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:16:13-49
-meta-data#android.app.lib_name
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:18:13-20:36
-	android:value
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:20:17-33
-	android:name
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:19:17-52
-activity#com.example.loginandregistraionscreen.LoginActivity
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:22:9-34:20
-	android:exported
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:24:13-36
-	android:name
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:23:13-42
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:16:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:18:13-21:29
 action#android.intent.action.MAIN
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:20:27-74
+activity#com.example.loginandregistraionscreen.EmptySuccessActivity
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:23:9-29:20
+	android:exported
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:24:13-49
+meta-data#android.app.lib_name
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:26:13-28:36
+	android:value
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:28:17-33
+	android:name
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:27:17-52
+activity#com.example.loginandregistraionscreen.LoginActivity
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:30:9-37:20
+	android:exported
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:32:13-36
+	android:name
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:31:13-42
 activity#com.example.loginandregistraionscreen.RegisterActivity
-ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:35:9-54
+ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:38:9-54
 	android:name
-		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:35:19-51
+		ADDED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml:38:19-51
 uses-sdk
 INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Mobile_Applications\Login_registration_project\app\src\main\AndroidManifest.xml
@@ -142,10 +154,14 @@ MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\shlom\.gradle\caches\8
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\shlom\.gradle\caches\8.9\transforms\c20b2b9e8be9f3180f6903d52612cc61\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\shlom\.gradle\caches\8.9\transforms\1e0ed208c8b0bcb4e08ddb0df7e16272\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\shlom\.gradle\caches\8.9\transforms\1e0ed208c8b0bcb4e08ddb0df7e16272\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\shlom\.gradle\caches\8.9\transforms\e3917049833432edd239f62b254a8ebd\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\shlom\.gradle\caches\8.9\transforms\e3917049833432edd239f62b254a8ebd\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.8.0] C:\Users\shlom\.gradle\caches\8.9\transforms\45d02183b8b443a0b452a3ce5530a78a\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.0] C:\Users\shlom\.gradle\caches\8.9\transforms\45d02183b8b443a0b452a3ce5530a78a\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.8.5] C:\Users\shlom\.gradle\caches\8.9\transforms\f6e735cfb1f147da2af55fee18bf949c\transformed\fragment-1.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.5] C:\Users\shlom\.gradle\caches\8.9\transforms\f6e735cfb1f147da2af55fee18bf949c\transformed\fragment-1.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.5] C:\Users\shlom\.gradle\caches\8.9\transforms\b90344477a8b7d1c42bc672ad48be735\transformed\fragment-ktx-1.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.5] C:\Users\shlom\.gradle\caches\8.9\transforms\b90344477a8b7d1c42bc672ad48be735\transformed\fragment-ktx-1.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.3] C:\Users\shlom\.gradle\caches\8.9\transforms\766815df7ff6fce84c0de57122aaa9db\transformed\activity-ktx-1.9.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.3] C:\Users\shlom\.gradle\caches\8.9\transforms\766815df7ff6fce84c0de57122aaa9db\transformed\activity-ktx-1.9.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.3] C:\Users\shlom\.gradle\caches\8.9\transforms\70387cc6b115d0d45667458140fdf232\transformed\activity-1.9.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.3] C:\Users\shlom\.gradle\caches\8.9\transforms\70387cc6b115d0d45667458140fdf232\transformed\activity-1.9.3\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\shlom\.gradle\caches\8.9\transforms\3eff1f8697942a0996b965b5893c061c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\shlom\.gradle\caches\8.9\transforms\3eff1f8697942a0996b965b5893c061c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\shlom\.gradle\caches\8.9\transforms\37fd8183d96b9dcf7ae992085d6d489a\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
@@ -174,14 +190,22 @@ MERGED from [androidx.loader:loader:1.0.0] C:\Users\shlom\.gradle\caches\8.9\tra
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\shlom\.gradle\caches\8.9\transforms\0b27a64f0e9c61e874c86b7c59c19928\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.15.0] C:\Users\shlom\.gradle\caches\8.9\transforms\d7f7879023271bdcdc59966016116610\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.15.0] C:\Users\shlom\.gradle\caches\8.9\transforms\d7f7879023271bdcdc59966016116610\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\shlom\.gradle\caches\8.9\transforms\2df13ec7a61fafd444bd4eda15106ec2\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\shlom\.gradle\caches\8.9\transforms\2df13ec7a61fafd444bd4eda15106ec2\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\shlom\.gradle\caches\8.9\transforms\60ae55c66cab6d9a142695220cfd9245\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\shlom\.gradle\caches\8.9\transforms\60ae55c66cab6d9a142695220cfd9245\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\7847a9d0be50e0e019e757d3357bb2eb\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\7847a9d0be50e0e019e757d3357bb2eb\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\43d53273e65635c294b95205aecaa339\transformed\lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\43d53273e65635c294b95205aecaa339\transformed\lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\685204d1d89ec9c2236adb137a4f7aba\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\685204d1d89ec9c2236adb137a4f7aba\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\b21647b531096b87a70e02df3b7f6bee\transformed\lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\b21647b531096b87a70e02df3b7f6bee\transformed\lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\cd346998c688a1c1f565539328946211\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\cd346998c688a1c1f565539328946211\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\1ecd1e411fb7534ad0c8c71d802ba9c8\transformed\lifecycle-livedata-core-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\1ecd1e411fb7534ad0c8c71d802ba9c8\transformed\lifecycle-livedata-core-ktx-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\5028ad0721a6cdaa43f9f46c8144ddbd\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\5028ad0721a6cdaa43f9f46c8144ddbd\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\shlom\.gradle\caches\8.9\transforms\4849d2b6367ceebba7f71bd699041eca\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44

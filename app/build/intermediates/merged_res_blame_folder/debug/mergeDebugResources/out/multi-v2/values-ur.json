@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.loginandregistraionscreen.app-mergeDebugResources-30:/values-ur/values-ur.xml",
+            "outputFile": "com.example.loginandregistraionscreen.app-mergeDebugResources-36:/values-ur/values-ur.xml",
             "map": [
                 {
                     "source": "C:\\Users\\shlom\\.gradle\\caches\\8.9\\transforms\\62a44b8b31048faec3f96e34139dd9fb\\transformed\\material-1.12.0\\res\\values-ur\\values-ur.xml",

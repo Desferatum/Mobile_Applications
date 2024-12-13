@@ -13,8 +13,7 @@ import androidx.core.widget.addTextChangedListener
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import com.example.credentials.CredentialsManager
-
+import com.example.loginandregistraionscreen.CredentialsManager
 
 /*
     User provides proper, unused credentials -> success
