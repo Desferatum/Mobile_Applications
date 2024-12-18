@@ -33,4 +33,9 @@ class CredentialsManager {
     fun isEmailRegistered(email: String): Boolean {
         return userCredentials.containsKey(email.trim().lowercase())
     }
+
+    fun isPasswordCorrect(email: String, password: String): Boolean {
+        val normalizedEmail = email.lowercase()
+        return userCredentials[normalizedEmail] == password
+    }
 }
