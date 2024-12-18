@@ -1,59 +1,85 @@
 package com.example.moblie_apps
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
+import android.util.Log
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.TextView
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class RegisterFragment(credentialsManager: CredentialsManager) : Fragment(R.layout.fragment_register) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RegisterFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class RegisterFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+          val textView = view.findViewById<TextView>(R.id.terms)
+          val mText = "By checking the box you agree to our Terms and Conditions"
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+          val mSpannableString = SpannableString(mText)
+          val mMainColor = ForegroundColorSpan(Color.parseColor("#6C63FF"))
+          mSpannableString.setSpan(mMainColor, 37, 57, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+          textView.text = mSpannableString
+
+        // Initialize the credentials manager
+        val credentialsManager = CredentialsManager()
+
+          val loginLink = view.findViewById<TextView>(R.id.login_link)
+          loginLink.setOnClickListener {
+              (activity as? UnifyingActivity)?.switchToLogin()
+          }
+
+          val emailLayout = view.findViewById<TextInputLayout>(R.id.email_register_Layout)
+          val emailEditText = view.findViewById<TextInputEditText>(R.id.email_register_EditText)
+          val passwordLayout = view.findViewById<TextInputLayout>(R.id.password_register_Layout)
+          val passwordEditText = view.findViewById<TextInputEditText>(R.id.password_register_EditText)
+          val nextButtonRegister = view.findViewById<MaterialButton>(R.id.button_next_register)
+
+          nextButtonRegister.setOnClickListener {
+              val email = emailEditText.text.toString()
+              val password = passwordEditText.text.toString()
+
+              val isEmailValid = validateField(emailLayout, email, "Please enter a valid email") {
+                  it.contains("@") && it.contains(".")
+              }
+              val isPasswordValid =
+                  validateField(passwordLayout, password, "Password cannot be empty") {
+                      it.length >= 8
+                  }
+
+              val result = credentialsManager.register(email, password)
+
+              if (isEmailValid && isPasswordValid) {
+                  if (result == "Registration successful") {
+                      Log.d("Register", "Registration successful")
+                      (activity as? UnifyingActivity)?.switchToLogin()
+                  } else if (result == "This email is already taken") {
+                      emailLayout.error = "This email is already taken"
+                  }
+              }
+          }
+    }
+
+    private fun validateField(
+        layout: TextInputLayout,
+        value: String,
+        errorMessage: String,
+        validationLogic: (String) -> Boolean
+    ): Boolean {
+        return if (!validationLogic(value)) {
+            layout.error = errorMessage
+            layout.isErrorEnabled = true
+            false
+        } else {
+            layout.isErrorEnabled = false
+            layout.error = null
+            true
         }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register2, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RegisterFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RegisterFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
