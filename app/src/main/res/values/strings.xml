@@ -1,6 +1,25 @@
 <resources>
-    <string name="app_name">Moblie_Apps</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Mobile_Apps</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
+
+    //Recipe names
+    <string name="recipe_black_karaage">Black Karaage with Curry Bento</string>
+    <string name="recipe_seafood_udon">Seafood Udon</string>
+    <string name="recipe_tonkotsu_ramen">Tonkotsu Ramen</string>
+    <string name="recipe_takoyaki">Takoyaki</string>
+    <string name="recipe_tempura">Tempura</string>
+    <string name="recipe_yakitori_shrimp">Yakitori Shrimp</string>
+    <string name="recipe_onigiri_bento">Onigiri Bento</string>
+
+    //Recipe descriptions
+    <string name="info_black_karaage">This Japanese modern izakaya dish features crispy black ka..</string>
+    <string name="info_seafood_udon">A Japanese-style dish that’s quick and easy to prepare..</string>
+    <string name="info_tonkotsu_ramen">Is a Japanese noodle soup dish that originated in Fukuoka, Fu..</string>
+    <string name="info_takoyaki">Is a Japanese snack that originated in Osaka, Japan. It..</string>
+    <string name="info_tempura">Is a popular Japanese dish that consists of seafood, vegetab..</string>
+    <string name="info_yakitori_shrimp">Is a Japanese dish that consists of skewered and gril..</string>
+    <string name="info_onigiri_bento">These are triangle rice sandwiches wrapped in nori s..</string>
+    <string name="recipe_image">Recipe image</string>
+
 </resources>
