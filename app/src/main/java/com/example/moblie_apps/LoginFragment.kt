@@ -1,5 +1,6 @@
 package com.example.moblie_apps
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -41,7 +42,9 @@ class LoginFragment(credentialsManager: CredentialsManager) : Fragment(R.layout.
                 if (credentialsManager.isEmailRegistered(email)) {
                     if (credentialsManager.isPasswordCorrect(email, password)) {
                         Log.d("Login", "Login successful!")
-                        (activity as? UnifyingActivity)?.navigateToFragment(FragmentFinal())
+                        val intent = Intent(activity, MainActivity::class.java)
+                        activity?.finish()
+                        startActivity(intent)
                     } else {
                         passwordLayout.error = "Wrong password. Try again"
                     }

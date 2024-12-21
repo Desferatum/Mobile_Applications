@@ -10,8 +10,5 @@ import android.widget.TextView
 class FragmentFinal : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val textView = view.findViewById<TextView>(R.id.final_message)
-        textView.text = "Login successful!"
     }
 }
