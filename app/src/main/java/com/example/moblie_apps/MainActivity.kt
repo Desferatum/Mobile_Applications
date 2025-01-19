@@ -2,7 +2,6 @@ package com.example.moblie_apps
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +21,12 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.launch
+import com.example.moblie_apps.CredentialsManager
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.progressindicator.CircularProgressIndicator
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
 
 data class Recipe(
     val imageId: Int,
@@ -36,6 +41,26 @@ class MainActivity : AppCompatActivity() {
     private val recipesRecyclerView
         get() = findViewById<RecyclerView>(R.id.recyclerview)
 
+    private val recyclerView
+        get() = findViewById<RecyclerView>(R.id.recyclerview)
+
+    private val credentialsManager = CredentialsManager()
+
+    private val progressIndicator
+        get() = findViewById<CircularProgressIndicator>(R.id.progress_indicator)
+
+    private val arrowBack
+        get() = findViewById<ImageView>(R.id.arrow_back)
+
+    private val text
+        get() = findViewById<TextView>(R.id.japanese)
+
+    private val logoutButton
+        get() = findViewById<MaterialButton>(R.id.logout_button)
+
+    private val isLoading = MutableStateFlow(false)
+
+    @SuppressLint("UnsafeIntentLaunch")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -53,6 +78,27 @@ class MainActivity : AppCompatActivity() {
         setupRecyclerView()
         setupSearchView()
         observeRecipes()
+
+        updateUIBasedOnLoginState()
+
+        logoutButton.setOnClickListener {
+            logoutUser()
+        }
+
+        val loadingState: StateFlow<Boolean> = isLoading
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                loadingState.collect { loading ->
+                    if (loading) {
+                        progressIndicator.visibility = View.VISIBLE
+                        recipesRecyclerView.visibility = View.GONE
+                    } else {
+                        progressIndicator.visibility = View.GONE
+                        recipesRecyclerView.visibility = View.VISIBLE
+                    }
+                }
+            }
+        }
     }
 
     private fun initializeRecipes(): List<Recipe> {
@@ -99,11 +145,54 @@ class MainActivity : AppCompatActivity() {
     private fun observeRecipes() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.filteredRecipes.collect { recipes ->
-                    (recipesRecyclerView.adapter as RecipeAdapter).updateRecipes(recipes)
-                }
+                viewModel.filteredRecipes.combine(viewModel.loadingState) { recipes, isLoading ->
+                    if (isLoading) {
+                        progressIndicator.visibility = View.VISIBLE
+                        recipesRecyclerView.visibility = View.GONE
+                    } else {
+                        progressIndicator.visibility = View.GONE
+                        recipesRecyclerView.visibility =
+                            if (recipes.isEmpty()) View.GONE else View.VISIBLE
+                        (recipesRecyclerView.adapter as RecipeAdapter).updateRecipes(recipes)
+                    }
+                }.collect { }
+
             }
         }
+    }
+
+    private fun logoutUser() {
+        CredentialsManager.setLoggedIn(this, false)
+
+        recyclerView.visibility = View.GONE
+        text.visibility = View.GONE
+        arrowBack.visibility = View.GONE
+        logoutButton.visibility = MaterialButton.GONE
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerView, LoginFragment(credentialsManager))
+            .commit()
+
+        updateUIBasedOnLoginState()
+    }
+
+    private fun updateUIBasedOnLoginState() {
+        if (CredentialsManager.isLoggedIn(this)) {
+            recyclerView.visibility = View.VISIBLE
+            text.visibility = View.VISIBLE
+            arrowBack.visibility = View.VISIBLE
+            logoutButton.visibility = MaterialButton.VISIBLE
+            loadRecyclerViewData()
+        } else {
+            recyclerView.visibility = View.GONE
+            text.visibility = View.GONE
+            arrowBack.visibility = View.GONE
+            logoutButton.visibility = MaterialButton.GONE
+        }
+    }
+
+    private fun loadRecyclerViewData() {
+        recyclerView.layoutManager = LinearLayoutManager(this)
     }
 }
 
@@ -159,10 +248,8 @@ class RecipeAdapter(private var recipes: List<Recipe>) :
 
     @SuppressLint("NotifyDataSetChanged")
     fun updateRecipes(newRecipes: List<Recipe>) {
-        if (newRecipes != recipes) {
-            recipes = newRecipes
-            notifyDataSetChanged()
-        }
+        recipes = newRecipes
+        notifyDataSetChanged()
     }
 }
 

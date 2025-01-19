@@ -1,9 +1,26 @@
 package com.example.moblie_apps
 
+import android.content.Context
 import java.util.Locale
 
 class CredentialsManager {
     companion object {
+        fun setLoggedIn(context: Context, isLoggedIn: Boolean) {
+            val sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putBoolean(KEY_LOGGED_IN, isLoggedIn)
+            editor.apply()
+        }
+
+        fun isLoggedIn(context: Context): Boolean {
+            val sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            return sharedPreferences.getBoolean(KEY_LOGGED_IN, false)
+        }
+
+        private const val PREFS_NAME = "user_prefs"
+        private const val KEY_LOGGED_IN = "logged_in"
+        private const val KEY_EMAIL = "email"
+        private const val KEY_PASSWORD = "password"
         val userCredentials = mutableMapOf<String, String>()
     }
 

@@ -41,6 +41,7 @@ class LoginFragment(credentialsManager: CredentialsManager) : Fragment(R.layout.
             if (isEmailValid && isPasswordValid) {
                 if (credentialsManager.isEmailRegistered(email)) {
                     if (credentialsManager.isPasswordCorrect(email, password)) {
+                        CredentialsManager.setLoggedIn(requireContext(), true)
                         Log.d("Login", "Login successful!")
                         val intent = Intent(activity, MainActivity::class.java)
                         activity?.finish()
