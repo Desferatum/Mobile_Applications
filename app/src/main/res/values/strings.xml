@@ -22,4 +22,6 @@
     <string name="info_onigiri_bento">These are triangle rice sandwiches wrapped in nori s..</string>
     <string name="recipe_image">Recipe image</string>
 
+    <string name="logoout">Logout</string>
+
 </resources>
